@@ -35,6 +35,8 @@ import Alert from '@mui/material/Alert';
 import { motion } from 'framer-motion';
 
 import { useAuth } from '../../contexts/AuthContext';
+import Navbar from '../../components/layout/Navbar';
+import Footer from '../../components/layout/Footer';
 
 const Login = () => {
   const theme = useTheme();
@@ -131,6 +133,8 @@ const Login = () => {
   };
   
   return (
+    <>
+    <Navbar/>
     <Box
       sx={{
         minHeight: '100vh',
@@ -561,6 +565,8 @@ const Login = () => {
         </Grid>
       </Container>
     </Box>
+<Footer/>
+    </>
   );
 };
 

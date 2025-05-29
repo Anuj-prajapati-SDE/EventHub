@@ -38,6 +38,8 @@ import Alert from '@mui/material/Alert';
 import { motion } from 'framer-motion';
 
 import { useAuth } from '../../contexts/AuthContext';
+import Navbar from '../../components/layout/Navbar';
+import Footer from '../../components/layout/Footer';
 
 const Register = () => {
   const theme = useTheme();
@@ -203,6 +205,8 @@ const Register = () => {
   };
   
   return (
+    <>
+<Navbar></Navbar>
     <Box
       sx={{
         minHeight: '100vh',
@@ -696,6 +700,8 @@ const Register = () => {
         </Grid>
       </Container>
     </Box>
+    <Footer></Footer>
+    </>
   );
 };
 

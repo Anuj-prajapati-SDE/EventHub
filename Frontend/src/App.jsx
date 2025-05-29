@@ -28,13 +28,13 @@ import UserProfile from './pages/profile/UserProfile';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
-
+import VenueOwnerDashboard from './pages/dashboard/VenueOwnerDashboard';
 // Route Guards
 import PrivateRoute from './components/routing/PrivateRoute';
 
 // Global CSS
 import './assets/styles/global.css';
-import FAQ from './pages/FAQ';
+
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import Feedback from './pages/Feedback';
@@ -61,6 +61,7 @@ function App() {
               <Route path="/register" element={<Register />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />
               <Route path="/reset-password/:token" element={<ResetPassword />} />
+              <Route path="/dashboard/admin" element={<VenueOwnerDashboard/>} />
             </Route>
 
             {/* Main routes with full layout */}
@@ -70,7 +71,7 @@ function App() {
               <Route path="/venues/:id" element={<VenueDetail />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/faq" element={<FAQ />} />
+          
               <Route path="/terms" element={<Terms/>} />
               <Route path="/privacy" element={<Privacy />} />
               <Route path="/feedback" element={<Feedback />} />

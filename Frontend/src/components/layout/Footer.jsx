@@ -329,10 +329,10 @@ const Footer = () => {
             © {currentYear} EventHub, Inc. All rights reserved.
           </Typography>
           <Box sx={{ display: 'flex', mt: { xs: 2, sm: 0 } }}>
-            {['Privacy', 'Terms', 'Cookies', 'Sitemap'].map((item, index) => (
+            {['Privacy', 'Terms'].map((item, index) => (
               <Link 
                 key={index} 
-                href="#" 
+                href={`/${item.toLowerCase()}`} 
                 variant="body2" 
                 color="text.secondary" 
                 sx={{ mx: 1 }} 

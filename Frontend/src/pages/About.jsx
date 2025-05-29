@@ -182,7 +182,7 @@ const About = () => {
                 color: theme.palette.info.main
               },
             ].map((feature, index) => (
-              <Grid item xs={12} md={6} lg={3} key={index}>
+              <Grid item xs={12} md={6} lg={3} key={index} minWidth={"100%"}>
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -362,7 +362,7 @@ const About = () => {
           
           <Grid container spacing={4}>
             {teamMembers.map((member, index) => (
-              <Grid item xs={12} sm={6} md={3} key={index}>
+              <Grid item xs={12} sm={6} md={3} key={index} minWidth={"100%"}>
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}

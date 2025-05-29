@@ -9,9 +9,9 @@ dotenv.config();
 
 // Import route files
 // const authRoutes = require('./routes/auth');
-const venueRoutes = require('./routes/venues');
-const bookingRoutes = require('./routes/bookings');
-const userRoutes = require('./routes/users');
+// const venueRoutes = require('./routes/venues');
+// const bookingRoutes = require('./routes/bookings');
+// const userRoutes = require('./routes/users');
 
 // Create Express app
 const app = express();
@@ -25,10 +25,10 @@ app.use(cors());
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // API Routes
-app.use('/api/auth', authRoutes);
-app.use('/api/venues', venueRoutes);
-app.use('/api/bookings', bookingRoutes);
-app.use('/api/users', userRoutes);
+// app.use('/api/auth', authRoutes);
+// app.use('/api/venues', venueRoutes);
+// app.use('/api/bookings', bookingRoutes);
+// app.use('/api/users', userRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
@@ -43,7 +43,7 @@ app.use((err, req, res, next) => {
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-})
+}) 
   .then(() => console.log('MongoDB Connected'))
   .catch(err => {
     console.error('MongoDB Connection Error:', err);

@@ -86,7 +86,6 @@ const Navbar = () => {
     { text: 'Venues', path: '/venues', icon: <LocationCityIcon /> },
     { text: 'About', path: '/about', icon: <InfoIcon /> },
     { text: 'Contact', path: '/contact', icon: <ContactSupportIcon /> },
-    { text: 'Faqs', path: '/faq', icon: <InfoIcon /> },
   ];
   
   // Example notifications

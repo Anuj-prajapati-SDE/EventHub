@@ -280,7 +280,7 @@ const Contact = () => {
           </Grid>
           
           {/* Contact Information */}
-          <Grid item xs={12} md={5}>
+          <Grid item xs={12} md={5} minWidth={'100%'}>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -347,87 +347,12 @@ const Contact = () => {
                     </Box>
                   </Grid>
                 </Grid>
+
                 
-                <Divider sx={{ my: 3 }} />
                 
-                <Typography variant="h6" fontWeight="bold" gutterBottom>
-                  Business Hours
-                </Typography>
-                <Grid container spacing={1} sx={{ mb: 4 }}>
-                  <Grid item xs={6}>
-                    <Typography variant="body2" color="text.secondary">
-                      Monday - Friday:
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <Typography variant="body2">
-                      9:00 AM - 6:00 PM EST
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <Typography variant="body2" color="text.secondary">
-                      Saturday:
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <Typography variant="body2">
-                      10:00 AM - 4:00 PM EST
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <Typography variant="body2" color="text.secondary">
-                      Sunday:
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <Typography variant="body2">
-                      Closed
-                    </Typography>
-                  </Grid>
-                </Grid>
                 
-                <Divider sx={{ my: 3 }} />
                 
-                <Typography variant="h6" fontWeight="bold" gutterBottom>
-                  Follow Us
-                </Typography>
-                <Box sx={{ display: 'flex', gap: 2 }}>
-                  {['facebook', 'twitter', 'instagram', 'linkedin'].map((social) => (
-                    <Button
-                      key={social}
-                      variant="outlined"
-                      size="small"
-                      sx={{ 
-                        minWidth: 'auto',
-                        p: 1,
-                        borderRadius: '50%',
-                        borderColor: alpha(theme.palette.primary.main, 0.3),
-                      }}
-                    >
-                      <Box 
-                        component="img" 
-                        src={`/img/social/${social}.svg`} 
-                        alt={social}
-                        sx={{ width: 18, height: 18 }}
-                      />
-                    </Button>
-                  ))}
-                </Box>
                 
-                <Box sx={{ flexGrow: 1 }} />
-                
-                <Box 
-                  component="img" 
-                  src="/img/contact-illustration.svg" 
-                  alt="Contact" 
-                  sx={{ 
-                    mt: 4,
-                    alignSelf: 'center',
-                    maxWidth: '80%',
-                    height: 'auto',
-                    display: { xs: 'none', sm: 'block' }
-                  }}
-                />
               </Paper>
             </motion.div>
           </Grid>
@@ -513,80 +438,7 @@ const Contact = () => {
             ))}
           </Grid>
         </Box>
-        
-        {/* Office Locations */}
-        <Box sx={{ mt: 10 }}>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <Typography variant="h4" fontWeight="bold" gutterBottom textAlign="center">
-              Our Offices
-            </Typography>
-            <Typography variant="body1" color="text.secondary" paragraph textAlign="center" sx={{ maxWidth: 700, mx: 'auto', mb: 6 }}>
-              Visit us at one of our office locations around the country
-            </Typography>
-          </motion.div>
-          
-          <Grid container spacing={4}>
-            {officeLocations.map((office, index) => (
-              <Grid item xs={12} md={4} key={index}>
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <Card 
-                    elevation={0} 
-                    sx={{ 
-                      borderRadius: 4,
-                      overflow: 'hidden',
-                      height: '100%'
-                    }}
-                  >
-                    <Box 
-                      component="img"
-                      src={`https://source.unsplash.com/800x450/?${office.city},city`}
-                      alt={office.city}
-                      sx={{ 
-                        width: '100%',
-                        height: 200,
-                        objectFit: 'cover',
-                      }}
-                    />
-                    <CardContent>
-                      <Typography variant="h5" fontWeight="bold" gutterBottom>
-                        {office.city}
-                      </Typography>
-                      <Box sx={{ display: 'flex', alignItems: 'flex-start', mb: 2 }}>
-                        <LocationOnIcon fontSize="small" color="action" sx={{ mt: 0.5, mr: 1 }} />
-                        <Typography variant="body2" color="text.secondary">
-                          {office.address}
-                        </Typography>
-                      </Box>
-                      <Box sx={{ display: 'flex', alignItems: 'flex-start', mb: 2 }}>
-                        <PhoneIcon fontSize="small" color="action" sx={{ mt: 0.5, mr: 1 }} />
-                        <Typography variant="body2" color="text.secondary">
-                          {office.phone}
-                        </Typography>
-                      </Box>
-                      <Box sx={{ display: 'flex', alignItems: 'flex-start' }}>
-                        <EmailIcon fontSize="small" color="action" sx={{ mt: 0.5, mr: 1 }} />
-                        <Typography variant="body2" color="text.secondary">
-                          {office.email}
-                        </Typography>
-                      </Box>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
-        
+    
         {/* Map */}
         <Box sx={{ mt: 8 }}>
           <Paper 
@@ -626,10 +478,10 @@ const Contact = () => {
             <Button 
               variant="contained" 
               size="large"
-              href="/faq"
+              href="/contact"
               sx={{ py: 1.5, px: 4 }}
             >
-              Visit FAQ
+              Contact Us
             </Button>
           </motion.div>
         </Box>

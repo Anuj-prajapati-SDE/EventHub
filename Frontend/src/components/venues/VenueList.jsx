@@ -39,7 +39,6 @@ import { motion } from 'framer-motion';
 import PageHeader from '../../components/common/PageHeader';
 import VenueCard from '../../components/venues/VenueCard';
 import Loader from '../../components/common/Loader';
-import AnimatedBackground from '../../components/common/AnimatedBackground';
 
 const VenueList = () => {
   const theme = useTheme();
@@ -301,8 +300,8 @@ const VenueList = () => {
         background="gradient"
       />
       
-      <Container maxWidth="lg" sx={{ py: 4 }}>
-        <Grid container spacing={4}>
+      <Container maxWidth="100%" sx={{ py: 4 }}>
+        <Grid container spacing={2} style={{display: 'flex', flexWrap:'nowrap'}}>
           {/* Sidebar Filters - Desktop */}
           <Grid 
             item 

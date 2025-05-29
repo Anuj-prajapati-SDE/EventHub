@@ -165,7 +165,7 @@ const Home = () => {
       <Box 
         sx={{
           position: 'relative',
-          height: { xs: '90vh', md: '85vh' },
+          height: { xs: '90vh', md: '95vh' },
           display: 'flex',
           alignItems: 'center',
           background: `linear-gradient(to right, ${alpha(theme.palette.primary.dark, 0.9)}, ${alpha(theme.palette.primary.main, 0.8)})`,
@@ -185,7 +185,8 @@ const Home = () => {
             background: "url('/img/pattern-dot.svg')",
           }}
         />
-        
+
+
         <motion.div 
           className="floating"
           initial={{ y: -20, opacity: 0 }}
@@ -197,7 +198,7 @@ const Home = () => {
             top: '50%', 
             width: '600px', 
             height: '600px',
-            borderRadius: '50%',
+            borderRadius: '50%', 
             background: `linear-gradient(135deg, ${theme.palette.secondary.light}44, ${theme.palette.secondary.main}22)`,
             zIndex: 1,
           }}
@@ -220,8 +221,9 @@ const Home = () => {
           }}
         />
 
+
         <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 2 }}>
-          <Grid container spacing={3} alignItems="center">
+          <Grid container spacing={2} alignItems="center" style={{ display: 'flex', height: '100%', flexWrap:'nowrap' }}>
             <Grid item xs={12} md={7}>
               <motion.div
                 initial={{ x: -30, opacity: 0 }}
@@ -234,6 +236,7 @@ const Home = () => {
                   sx={{ 
                     color: 'white',
                     mb: 2,
+                  
                     fontSize: { xs: '2.5rem', sm: '3.2rem', md: '3.8rem' },
                     lineHeight: 1.1,
                   }}

@@ -223,8 +223,9 @@ const Register = () => {
             overflow: 'hidden',
             boxShadow: '0 25px 75px rgba(16, 30, 54, 0.25)',
             backgroundColor: '#fff',
-            height: { md: '700px' },
+            height: { md: '800px' },
           }}
+          style={{display: 'flex', flexDirection: { xs: 'column', md: 'row' } }}
         >
           {/* Left Side - Illustration */}
           <Grid
